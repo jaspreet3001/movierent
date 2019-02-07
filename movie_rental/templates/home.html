@@ -1,0 +1,16 @@
+
+{% extends "base1.html" %}
+{% block abc %}
+<H1 align=Center>Hello! Welcome to Movie Rental Portal</H1>
+{% if user.is_authenticated %}
+  Hi {{ user.username }}!
+  <br>
+  <br>
+  <a href="{% url 'logout' %}">Logout</a>
+{% else %}
+  <p>You are not logged in</p>
+  <a href="{% url 'login' %}">Login</a>
+  Are you a new User? SignUp here:
+    <a href="{% url 'signup' %}">Sign Up</a>
+{% endif %}
+{% endblock %}

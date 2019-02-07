@@ -1,0 +1,22 @@
+
+{% extends "base1.html" %}
+{% block abc %}
+<TABLE border='2'>
+<tr>
+    <th>Name</th>
+    <th>Year</th>
+    <th>Genre</th>
+    <th>Language</th>
+    <th>Rented by</th>
+</tr>
+    {% for i in movies_data %}
+        <tr>
+            <td>{{i.name}}</td>
+            <td>{{i.year}}</td>
+            <td>{{i.genre}}</td>
+            <td>{{i.lang}}</td>
+            <td>{{i.customer_name}}</td>
+        </tr>
+    {% endfor %}
+</TABLE>
+{% endblock %}

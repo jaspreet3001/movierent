@@ -1,0 +1,42 @@
+
+{% extends "base1.html" %}
+{% block 'abc' %}
+{% endblock %}
+
+#{% block content %}
+
+<TABLE border='2'>
+<tr border='2'>
+	<th>Name: </th>
+	<th>Phone: </th>
+	<th>Email: </th>
+	<th>Address1: </th>
+	<th>Address2: </th>
+	<th>Age: </th>
+</tr>			
+		{% for i in data %}
+		<tr>
+		    <td>
+		        {{i.name}}
+		    </td>
+		    <td> {{i.phone_number}}
+		    </td>
+		    <td> {{i.email}}
+		    </td>
+		    <td> {{i.address1}}
+		    </td>
+		    <td> {{i.address2}}
+		    </td>
+		    <td> {{i.age}}
+		    </td>
+		    <td>
+		    <a href='{% url 'delete_customer' i.id %}'>
+		    	<input id="delete" type="submit" name="delete" value="Delete" />
+		    </a>
+		    </td>
+		</tr>
+	    
+	    {% endfor %}
+</TABLE>
+</form>
+{% endblock %}

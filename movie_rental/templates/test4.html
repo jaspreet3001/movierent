@@ -1,0 +1,27 @@
+
+{% extends "base1.html" %}
+{% block abc %}
+<TABLE border='2' style="float: left">
+<tr >
+    <th>Name</th> 
+    <th>Year</th>
+    <th>Genre</th>
+    <th>Language</th>
+    <th>Rent Price</th> 
+    <th>Rented</th>
+    <th>Customer_Name</th>
+</tr>
+    {% for i in movies_data %}
+        <tr>
+            <td>{{i.name}}</td>
+            <td>{{i.year}}</td>
+            <td>{{i.genre}}</td>
+            <td>{{i.lang}}</td>
+            <td>{{i.rent_price}}</td>
+            <td>{{i.rented}}</td>
+            <td>{{i.customer_name}}</td>
+            <td><a href='{% url 'delete_movie' i.id %}'><input id="delete" type="submit" name="delete" value="Delete" /></a></td>
+            </tr>
+    {% endfor %}
+</TABLE>
+{% endblock %}

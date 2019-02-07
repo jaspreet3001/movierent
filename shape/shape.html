@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="fr" xml:lang="fr" xmlns="http://www.w3.org/1999/xhtml">
+<HEAD>
+<TITLE>HTML PAGE 1</TITLE>
+</HEAD>
+<BODY>
+<H1>HEADING</H1>
+<br>
+<ul>
+<li>Length: </li>
+<li>Area: </li>
+    {% for i in mydata %}
+    <li>
+        {{i.length}}
+    </li>
+    <li>
+        {{i.area}}
+    </li>
+    {% endfor %}
+ </ul>
+</BODY>
+</HTML>
+

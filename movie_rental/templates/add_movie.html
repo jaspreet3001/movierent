@@ -1,6 +1,6 @@
 {% extends "base1.html" %}
 {% block abc %}
-<form action='{% url 'newmovie' %}' method="POST">
+<form margin='10pt' action='{% url 'newmovie' %}' method="POST">
     {% csrf_token %}
     {{ form1.as_p }}
     <input type="submit" value="Submit">
